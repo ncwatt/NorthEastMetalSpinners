@@ -45,3 +45,10 @@ add_filter( 'nav_menu_link_attributes', 'add_specific_menu_location_atts', 10, 3
 
 // Add images sizes
 add_image_size('post_image', 1200, 628, false);
+
+// WooCommerce Support
+function mytheme_add_woocommerce_support() {
+    add_theme_support( 'woocommerce' );
+}
+
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );

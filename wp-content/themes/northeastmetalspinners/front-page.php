@@ -1,8 +1,6 @@
 <?php get_header(); ?>
-
-
-        <img src="<?php echo get_template_directory_uri() ?>/img/slide_01.jpg" class="img-fluid" alt="CNC Spinning Machine" />
-
+    <img src="<?php echo get_template_directory_uri() ?>/img/slide_01.jpg" class="img-fluid" alt="CNC Spinning Machine" />
+    <!-- Welcome -->
     <div class="welcome">
         <div class="container">
             <div class="row">
