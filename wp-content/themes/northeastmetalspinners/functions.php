@@ -18,6 +18,12 @@ add_action('wp_enqueue_scripts', 'load_javascript');
 add_theme_support('menus');
 add_theme_support('post-thumbnails');
 
+// Add title tag to head of pages
+function theme_slug_setup() {
+    add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'theme_slug_setup' );
+
 // Register menus
 register_nav_menus(
 	array (
