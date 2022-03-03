@@ -61,7 +61,6 @@
     <header>
         <nav id="topNavigation" class="navbar navbar-expand-md navbar-light shadow-sm">
 		    <div class="container">
-                <div></div>
 			    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 				    <span class="navbar-toggler-icon"></span>
 			    </button>
@@ -78,6 +77,34 @@
 					    ); 
 				    ?>
 			    </div>
-		    </div>
+				<!-- Right elements -->
+				<div class="d-flex align-items-center">
+      				<!-- Cart -->
+      				<a class="text-reset me-3" href="#">
+        				<i class="fas fa-shopping-cart"></i>
+      				</a>
+
+      				<!-- Notifications -->
+      				<div class="dropdown">
+        				<a
+          					class="text-reset me-3 dropdown-toggle hidden-arrow"
+          					href="#"
+          					id="navbarDropdownMenuLink"
+          					role="button"
+          					data-mdb-toggle="dropdown"
+          					aria-expanded="false"
+        				>
+          					<i class="fas fa-bell"></i>
+          					<span class="badge rounded-pill badge-notification bg-danger">1</span>
+        				</a>
+      				</div>
+
+					<!-- Account -->
+					<a class="text-reset me-3" href="#">
+						<i class="fas fa-user"></i>
+      				</a>
+    			</div>
+    			<!-- Right elements -->
+  			</div>
 	    </nav>
     </header>
