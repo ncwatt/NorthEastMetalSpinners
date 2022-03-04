@@ -80,7 +80,7 @@
 				<!-- Right elements -->
 				<div class="d-flex align-items-center">
       				<!-- Cart -->
-      				<a class="text-reset me-3" href="#">
+      				<a class="text-reset me-3" href="<?php echo get_permalink( get_page_by_path( 'cart' ) ) ?>">
         				<i class="fas fa-shopping-cart"></i>
       				</a>
 
