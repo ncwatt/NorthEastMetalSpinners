@@ -1,19 +1,17 @@
 <?php get_header(); ?>
+    <!-- Shop Now -->
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 g-0 d-md-none">
-                <img src="<?php echo get_template_directory_uri() ?>/img/sample-xs-shop.jpg" class="img-fluid" alt="Shop" />
+                <a href="<?php echo get_permalink( get_page_by_path( 'shop' ) ) ?>">
+                    <img src="<?php echo get_template_directory_uri() ?>/img/shop-now-xs.jpg" class="img-fluid" alt="Shop" />
+                </a>
             </div>
             <div class="col-12 g-0 d-none d-md-block">
-                <img src="<?php echo get_template_directory_uri() ?>/img/sample-md-shop.jpg" class="img-fluid" alt="Shop" />
+                <a href="<?php echo get_permalink( get_page_by_path( 'shop' ) ) ?>">
+                    <img src="<?php echo get_template_directory_uri() ?>/img/shop-now-md.jpg" class="img-fluid" alt="Shop" />
+                </a>
             </div>
-        </div>
-    </div>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-12 g-0">
-                <img src="<?php echo get_template_directory_uri() ?>/img/slide_01.jpg" class="img-fluid" alt="CNC Spinning Machine" />
-                </div>
         </div>
     </div>
     <!-- Welcome -->
