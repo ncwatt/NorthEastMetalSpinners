@@ -100,7 +100,7 @@
       				</div>
 
 					<!-- Account -->
-					<a class="text-reset me-3" href="#">
+					<a class="text-reset me-3" href="<?php echo get_permalink( get_page_by_path( 'my-account' ) ) ?>">
 						<i class="fas fa-user"></i>
       				</a>
     			</div>
