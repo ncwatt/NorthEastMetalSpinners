@@ -3,6 +3,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
+                woocomerce template
 				<?php woocommerce_content(); ?>
 			</div>
 		</div>
