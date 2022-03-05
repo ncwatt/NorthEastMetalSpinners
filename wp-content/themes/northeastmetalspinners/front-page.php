@@ -14,6 +14,53 @@
             </div>
         </div>
     </div>
+    <!-- Company Features -->
+    <div class="features my-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-3 my-3 my-lg-0">
+                    <div class="shadow p-4 bg-white rounded h-100 d-inline-block">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/feature_01.png" class="img-fluid" />
+                        <h5 class="feature">Technical <span>Expertise</span></h5>
+                        <hr />
+                        <p class="text-block">
+                            Our technical expertise allows us to produce highly complex components, keeping us at the forefront of the advanced metal spinning industry.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 my-3 my-lg-0">
+                    <div class=" shadow p-4 bg-white rounded h-100 d-inline-block">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/feature_02.png" class="img-fluid" />
+                        <h5 class="feature">Consistent <span>Quality</span></h5>
+                        <hr />
+                        <p class="text-block">
+                            Our company prides itself on manufacturing high quality, precision components that consistently meet the needs of the customer.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 my-3 my-lg-0">
+                    <div class=" shadow p-4 bg-white rounded h-100 d-inline-block">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/feature_03.png" class="img-fluid" />
+                        <h5 class="feature">Competitive <span>Pricing</span></h5>
+                        <hr />
+                        <p class="text-block">
+                            A carefully planned combination of metal spinning, press work, and in-house tooling allow us to remain competitive in the market place.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 my-3 my-lg-0">
+                    <div class=" shadow p-4 bg-white rounded h-100 d-inline-block">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/feature_04.png" class="img-fluid" />
+                        <h5 class="feature">On Time <span>Delivery</span></h5>
+                        <hr />
+                        <p class="text-block">
+                            Our structured program of in-house tool making and manufacturing processes allow us to deliver components on time, every time.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <!-- Welcome -->
     <div class="welcome">
         <div class="container">
