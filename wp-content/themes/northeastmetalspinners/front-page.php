@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 my-3 my-lg-0">
-                    <div class=" shadow p-4 bg-white rounded h-100 d-inline-block">
+                    <div class="shadow p-4 bg-white rounded h-100 d-inline-block">
                         <img src="<?php echo get_template_directory_uri() ?>/img/feature_02.png" class="img-fluid" />
                         <h5 class="feature">Consistent <span>Quality</span></h5>
                         <hr />
@@ -39,7 +39,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 my-3 my-lg-0">
-                    <div class=" shadow p-4 bg-white rounded h-100 d-inline-block">
+                    <div class="shadow p-4 bg-white rounded h-100 d-inline-block">
                         <img src="<?php echo get_template_directory_uri() ?>/img/feature_03.png" class="img-fluid" />
                         <h5 class="feature">Competitive <span>Pricing</span></h5>
                         <hr />
@@ -49,7 +49,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 my-3 my-lg-0">
-                    <div class=" shadow p-4 bg-white rounded h-100 d-inline-block">
+                    <div class="shadow p-4 bg-white rounded h-100 d-inline-block">
                         <img src="<?php echo get_template_directory_uri() ?>/img/feature_04.png" class="img-fluid" />
                         <h5 class="feature">On Time <span>Delivery</span></h5>
                         <hr />
@@ -79,6 +79,40 @@
                     <p>We can assist you with material selection and the range of finishing options available, as well as providing a range of additional services including welding, punching, beading, anodizing, plating, polishing and custom assembly.</p>
                 </div>
                 <div class="col-sm-6">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- YouTube Videos -->
+    <div class="videos my-3 my-md-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                    <div class="bcolor2 p-2 rounded h-100 d-inline-block">
+                        <div class="youtube-container mb-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/WeViQ92NWgA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3>Musical Instrument Accessory</h3>
+                        <p>A musical instrument accessory being made using traditional handspinning.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 mb-3 mb-md-0">
+                    <div class="bcolor3 p-2 rounded h-100 d-inline-block">
+                        <div class="youtube-container mb-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/Q99sRVmuvRM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3>Leifield PNC Spinning Machine</h3>
+                        <p>Spinning a stainless steel rain cap top with a Leifield PNC Spinning Machine.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4">
+                    <div class="bcolor1 p-2 rounded h-100 d-inline-block">
+                        <div class="youtube-container mb-2">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/YXWuN1lpBtw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <h3>Aluminium Filter Housing</h3>
+                        <p>Traditional handspinning to make an aluminium filter housing.</p>
+                    </div>
                 </div>
             </div>
         </div>
