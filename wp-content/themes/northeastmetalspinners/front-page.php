@@ -15,12 +15,12 @@
         </div>
     </div>
     <!-- Company Features -->
-    <div class="features my-5">
+    <div class="features my-3 my-lg-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-6 col-lg-3 my-3 my-lg-0">
-                    <div class="shadow p-4 bg-white rounded h-100 d-inline-block">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/feature_01.png" class="img-fluid" />
+                    <div class="shadow px-4 bg-white rounded h-100 d-inline-block">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/feature_01.jpg" class="img-fluid" />
                         <h5 class="feature">Technical <span>Expertise</span></h5>
                         <hr />
                         <p class="text-block">
@@ -29,8 +29,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 my-3 my-lg-0">
-                    <div class="shadow p-4 bg-white rounded h-100 d-inline-block">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/feature_02.png" class="img-fluid" />
+                    <div class="shadow px-4 bg-white rounded h-100 d-inline-block">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/feature_02.jpg" class="img-fluid" />
                         <h5 class="feature">Consistent <span>Quality</span></h5>
                         <hr />
                         <p class="text-block">
@@ -39,8 +39,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 my-3 my-lg-0">
-                    <div class="shadow p-4 bg-white rounded h-100 d-inline-block">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/feature_03.png" class="img-fluid" />
+                    <div class="shadow px-4 bg-white rounded h-100 d-inline-block">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/feature_03.jpg" class="img-fluid" />
                         <h5 class="feature">Competitive <span>Pricing</span></h5>
                         <hr />
                         <p class="text-block">
@@ -49,8 +49,8 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3 my-3 my-lg-0">
-                    <div class="shadow p-4 bg-white rounded h-100 d-inline-block">
-                        <img src="<?php echo get_template_directory_uri() ?>/img/feature_04.png" class="img-fluid" />
+                    <div class="shadow px-4 bg-white rounded h-100 d-inline-block">
+                        <img src="<?php echo get_template_directory_uri() ?>/img/feature_04.jpg" class="img-fluid" />
                         <h5 class="feature">On Time <span>Delivery</span></h5>
                         <hr />
                         <p class="text-block">
