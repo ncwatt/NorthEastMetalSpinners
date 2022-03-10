@@ -32,7 +32,7 @@
                 <div class="col-sm">
                     <h3 class="heading">Get In <span>Touch</span></h3>
                     <p>Whether you are interested in our products or wanting to provide feedback we would love to hear from you.</p>
-                    <a href="#" class="button highlight1">Send a message</a>
+                    <a href="#" class="button-highlight highlight1">Contact Us</a>
                 </div>
             </div>
             <div class="row">
