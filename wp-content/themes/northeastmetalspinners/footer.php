@@ -26,7 +26,7 @@
                         <h3 class="heading">Partscale <span>Ltd.</span></h3>
                         <p><i class="fa fa-map-marker highlight3"></i>&nbsp;42 Hutton Close, Crowther Industrial Estate, Washington, Tyne & Wear. NE38 0AH</p>
                         <p><i class="fa fa-phone highlight3"></i>&nbsp;<a href="tel:01914163440" class="highlight3 tel">(0191) 416 3440</a></p>
-                        <p><i class="fa fa-clock highlight3"></i>&nbsp;Mon-Fri: 08:00-17:00</p>
+                        <p><i class="fa fa-clock highlight3"></i>&nbsp;Mon-Fri: 08:00-16:00</p>
                     </div>
                 </div>
                 <div class="col-sm">
@@ -38,7 +38,7 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="copyright">
-                        <p>&copy; Copyright <?php echo date("Y"); ?> Partscale Ltd., trading as North East Metal Spinners - All rights reserved.</p>
+                        <p>&copy; Copyright <?php echo date("Y"); ?> North East Metal Spinners [formerly Partscale Ltd.] - All rights reserved.</p>
                         <p>Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a> | Theme by <a href="https://gtctek.co.uk" target="_blank">Gtctek</a> | Admin <a href="/wp-admin">Login</a></p>
                         <a target="_blank" href="#" class="social-icon color-icon border-icon rounded-icon social-icon soc-facebook"></a>
                     </div>
