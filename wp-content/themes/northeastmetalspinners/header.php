@@ -85,7 +85,7 @@
       				</a>
 
       				<!-- Notifications -->
-      				<div class="dropdown">
+      				<div class="dropdown" style="display: none;">
         				<a
           					class="text-reset me-3 dropdown-toggle hidden-arrow"
           					href="#"
