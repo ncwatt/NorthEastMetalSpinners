@@ -1,5 +1,14 @@
 <?php
 
+function checkHTTPS()
+{
+    if (! isset($_SERVER['HTTPS']) or $_SERVER['HTTPS'] == 'off' ) {
+        $redirect_url = "https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+        header("Location: $redirect_url");
+        exit();
+    }
+}
+
 function load_loadstylesheets()
 {
 	wp_register_style('stylesheet', get_template_directory_uri() . '/css/stylesheet.css', '', 1, 'all');

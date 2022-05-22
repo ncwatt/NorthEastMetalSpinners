@@ -2,7 +2,8 @@
 /*
 	Template Name: Shop Page
 */
-get_header(); ?>
+?>
+<?php get_header(); ?>
 <div class="page-content bg-color1">
 	<div class="container my-3">
 		<div class="row">

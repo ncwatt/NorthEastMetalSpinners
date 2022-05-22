@@ -3,7 +3,6 @@
 Template Name: Contact Page
 */
 ?>
-
 <?php get_header(); ?>
 <div class="page-content bg-color1">
     <div class="container my-3">
@@ -75,7 +74,7 @@ Template Name: Contact Page
                         possible.
                     </p>
                 <?php else : ?>
-                    <form id="contactForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" novalidate>
+                    <form id="contactForm" method="post" action="" novalidate>
                         <input type="hidden" name="contactForm" value="1" />
                         <div class="mb-3">
                             <label for="contactFullName" class="form-label">Full Name</label>
@@ -91,6 +90,14 @@ Template Name: Contact Page
                             <label for="contactMessage" class="form-label">Message</label>
                             <textarea rows="5" name="contactMessage" id="contactMessage" aria-describedby="contactMessageHelp" placeholder="Enter message" class="form-control <?php if (isset($messageErr)) { echo($messageErr == true) ? 'is-invalid' : 'is-valid'; } ?>"><?php echo(isset($message)) ? $message : ''; ?></textarea>
                             <small id="contactMessageHelp" class="form-text text-muted">5000 character limit</small>
+                        </div>
+                        <div class="mb-3">
+                            <div class="g-recaptcha" data-sitekey="<?php echo RECAPTCHA_SITEKEY; ?>" data-callback="callbackCommentSubmit"></div>
+				            <script type="text/javascript">
+					            function callbackCommentSubmit() {
+						            document.getElementById("submit-comment").removeAttribute("disabled");
+					            }
+				            </script>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
