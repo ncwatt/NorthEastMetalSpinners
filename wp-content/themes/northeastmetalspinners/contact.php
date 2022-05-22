@@ -42,6 +42,17 @@ Template Name: Contact Page
                             $postSuccess = false;
                         }
 
+                        // Validate the reCaptcha
+                        $reCaptchaErr = false;
+                        $receivedRecaptcha = $_POST['g-recaptcha-response'];
+                        $verifiedRecaptcha = file_get_contents( 'https://www.google.com/recaptcha/api/siteverify?secret=' . RECAPTCHA_SECRETKEY . '&response=' . $receivedRecaptcha);
+                        $verResponseData = json_decode($verifiedRecaptcha);
+
+                        if( !$verResponseData->success ) {
+	                        $reCaptchaErr = true;
+                            $postSuccess = false;
+                        }
+
                         // If postSuccess is true at this stage then there has been no errors so far
                         // so let's try and send the email
                         $sendErr = false;
@@ -50,7 +61,7 @@ Template Name: Contact Page
                             $headers[] = 'Content-Type: text/html; charset=UTF-8';
                             $headers[] = 'Reply-To: ' . $fullName . ' <' . $email . '>';
 
-                            if (wp_mail("nick@gtctek.co.uk", "Website Contact Form", $emailBody, $headers) == false) {
+                            if (wp_mail(constant('CONTACT_EMAIL'), "Website Contact Form", $emailBody, $headers) == false) {
                                 $sendErr = true;
                                 $postSuccess = false;
                             }
@@ -98,6 +109,7 @@ Template Name: Contact Page
 						            document.getElementById("submit-comment").removeAttribute("disabled");
 					            }
 				            </script>
+                            <span style="color: #ff0000;"><?php if (isset($reCaptchaErr)) { echo($reCaptchaErr == true) ? 'reCaptcha not validated' : ''; } ?></span>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
