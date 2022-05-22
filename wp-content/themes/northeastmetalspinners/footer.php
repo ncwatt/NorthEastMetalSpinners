@@ -32,13 +32,13 @@
                 <div class="col-sm">
                     <h3 class="heading">Get In <span>Touch</span></h3>
                     <p>Whether you are interested in our products or wanting to provide feedback we would love to hear from you.</p>
-                    <a href="#" class="button-highlight highlight1">Contact Us</a>
+                    <a href="<?php echo get_permalink( get_page_by_path( '/contact' ) ); ?>" class="button-highlight highlight1">Contact Us</a>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm">
                     <div class="copyright">
-                        <p>&copy; Copyright <?php echo date("Y"); ?> North East Metal Spinners [formerly Partscale Ltd.] - All rights reserved.</p>
+                        <p>&copy; Copyright <?php echo date("Y"); ?> North East Metal Spinners - All rights reserved.</p>
                         <p>Powered by <a href="https://wordpress.org/" target="_blank">WordPress</a> | Theme by <a href="https://gtctek.co.uk" target="_blank">Gtctek</a> | Admin <a href="/wp-admin">Login</a></p>
                         <a target="_blank" href="#" class="social-icon color-icon border-icon rounded-icon social-icon soc-facebook"></a>
                     </div>
