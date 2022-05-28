@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  web:
+    build: ./wordpress
+    #image: php:8.1-apache
+    image: wordpress:latest
+    ports:
+      - '8080:80'
+    volumes:
+      #- /Users/vincentb/Sites/_docker/apache:/etc/apache2/sites-enabled
+      #- /Users/vincentb/Sites:/var/www/html
+      #- ./php.ini:/usr/local/etc/php/php.ini
+      - ../:/var/www/html
+    depends_on:
+      - mariadb
+    #extra_hosts:
+      #- 'nems.test:127.0.0.1'
+      # - 'some-other-host.test:127.0.0.1'
+    networks:
+      - dev-env
+  phpmyadmin:
+    image: phpmyadmin:latest
+    ports:
+      - 8081:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
+    depends_on:
+      - mariadb
+    #volumes:
+      #- /Users/vincentb/Sites/_docker/php/php.ini:/usr/local/etc/php/php.ini
+    networks:
+      - dev-env
+  mariadb:
+    image: mariadb:latest
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 'Psfqw7w1phil'
+      MYSQL_USER: 'nickwatt'
+      MYSQL_PASSWORD: 'Zqdxcst3DJ1!'
+      MYSQL_DATABASE: 'nems'
+    volumes:
+      - mysqldata-nems:/var/lib/mysql
+    ports:
+      - 3306:3306
+    networks:
+      - dev-env
+volumes:
+  mysqldata-nems: {}
+networks:
+  dev-env: {}
