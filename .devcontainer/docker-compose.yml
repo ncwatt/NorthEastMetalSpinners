@@ -10,13 +10,13 @@ services:
       - ../:/var/www/html
     depends_on:
       - mariadb
-    extra_hosts:
+    #extra_hosts:
       # Check the hosts file on the local machine for the
       # following lines and use the same IP address:
       # Added by Docker Desktop
       # 192.168.1.114 host.docker.internal
       # 192.168.1.114 gateway.docker.internal
-      - "localhost:192.168.1.114"
+      # - "localhost:192.168.1.114"
     networks:
       - dev-env
   phpmyadmin:
