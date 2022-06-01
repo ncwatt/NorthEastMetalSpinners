@@ -2,24 +2,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm">
-                    <div class="news">
-                        <h3 class="heading">Latest <span>News</span></h3>
-                        <?php
-                            $news = new WP_Query( array( 'category_name' => 'news' ) );
-                            $post_counter = 0;
-
-                            if ( $news->have_posts() ) {
-                                while ( $news->have_posts() and $post_counter < 2 ) {
-                                    $news->the_post();?>
-                                    <h4><a href="<?php echo get_post_permalink( $id, $leavename, $sample ); ?>" class="post_title"><?php the_title(); ?></a></h4>
-                                    <p><? echo get_the_excerpt() ?></p>
-                                    <p class="post_date"><?php echo get_the_date( 'F j, Y' ); ?></p>
-                                    <?php
-                                    $post_counter++;
-                                }
-                            }
-                        ?>
-                    </div>
+                    <h3 class="heading">Get In <span>Touch</span></h3>
+                    <p>Whether you are interested in our products or wanting to provide feedback we would love to hear from you.</p>
+                    <a href="<?php echo get_permalink( get_page_by_path( '/contact' ) ); ?>" class="button-highlight highlight1">Contact Us</a>
                 </div>
                 <div class="col-sm">
                     <div class="company-info">
@@ -30,9 +15,10 @@
                     </div>
                 </div>
                 <div class="col-sm">
-                    <h3 class="heading">Get In <span>Touch</span></h3>
-                    <p>Whether you are interested in our products or wanting to provide feedback we would love to hear from you.</p>
-                    <a href="<?php echo get_permalink( get_page_by_path( '/contact' ) ); ?>" class="button-highlight highlight1">Contact Us</a>
+                    <div class="news">
+                        <h3 class="heading">Our <span>Policies</span></h3>
+                        
+                    </div>
                 </div>
             </div>
             <div class="row">
