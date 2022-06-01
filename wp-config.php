@@ -59,6 +59,8 @@ define( 'AUTH_SALT',        'z!|I!Yg5s]V-uHv+ELw].Xr`CkG.;4FD7*mkwLyNzoL*>c}gxo0
 define( 'SECURE_AUTH_SALT', 'yi%j7`:G8OL !}&EL;FY;8|tG .8&6xA6):9rNV!?OFCZ|&;7%CyF#~Y_{o07g,T' );
 define( 'LOGGED_IN_SALT',   '){YZEYOBzk%eUZFRO^AAH&W(_DlFp AeaHmo8R[tk>X`w&lWbDpnB2 )s=S%ilG0' );
 define( 'NONCE_SALT',       'Co@*)pt-p+w0)Cix3my[N4M%becsa;4lsk!6g6 v,UAw-7 =tZLr)Wg7{%6.v4*V' );
+define( 'RECAPTCHA_SITEKEY', '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI' );
+define( 'RECAPTCHA_SECRETKEY', '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe' );
 define( 'AUTOMATIC_UPDATER_DISABLED', true );
 define( 'DEV_ENV', 'true' );
 /**#@-*/
