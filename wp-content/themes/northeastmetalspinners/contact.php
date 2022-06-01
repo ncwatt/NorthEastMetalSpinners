@@ -79,7 +79,7 @@ Template Name: Contact Page
 
                 ?>
 
-                <?php if ($postSuccess == true) : ?>
+                <?php if ((isset($postSuccess)) && ($postSuccess == true)) : ?>
                     <p>
                         Thank you for contacting North East Metal Spinners. We have received your enquiry and one of our team will be in contact with you as soon
                         possible.
