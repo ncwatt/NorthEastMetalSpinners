@@ -10,18 +10,4 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
 
 RUN usermod -a -G users www-data
 # RUN usermod -a -G root www-data
-# Install MySQLi
-#RUN apt-get update -y && apt-get install -y sendmail libpng-dev
-#RUN apt-get update && apt-get install -y \
-#    libmagickwand-dev --no-install-recommends \
-#    && pecl install imagick \
-#	&& docker-php-ext-enable imagick
-#RUN apt-get update && apt-get install -y \
-#    zlib1g-dev \
-#    libzip-dev \
-#    && docker-php-ext-install zip
-#RUN docker-php-ext-install mysqli
-# RUN docker-php-ext-install mbstring
-#RUN docker-php-ext-install gd
-#RUN docker-php-ext-install exif
-# RUN docker-php-ext-install install
+
