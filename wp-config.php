@@ -63,6 +63,7 @@ define( 'RECAPTCHA_SITEKEY', '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI' );
 define( 'RECAPTCHA_SECRETKEY', '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe' );
 define( 'AUTOMATIC_UPDATER_DISABLED', true );
 define( 'DEV_ENV', 'true' );
+define( 'CONTACT_EMAIL', 'webmaster@northeastmetalspinners.co.uk');
 /**#@-*/
 
 /**
