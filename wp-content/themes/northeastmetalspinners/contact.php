@@ -2,6 +2,75 @@
 /*
 Template Name: Contact Page
 */
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST['contactForm'])) {
+        // Set postSuccess to true - this will get set to false during validation if a value fails
+        $postSuccess = true;
+        
+        // Validate the email address
+        $emailErr = false;
+        $email = test_input($_POST["contactEmail"]);
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) { 
+            $emailErr = true;
+            $postSuccess = false;
+        }
+
+        // Validate full name has a value and is no longer than 50 characters
+        $fullNameErr = false;
+        $fullName = test_input($_POST["contactFullName"]);
+        if (!(strlen($fullName) > 0 && strlen($fullName) < 51)) {
+            $fullNameErr = true;
+            $postSuccess = false;
+        }
+
+        // Validate that the message has some content
+        $messageErr = false;
+        $message = test_input($_POST["contactMessage"]);
+        if (!(strlen($message) > 0 && strlen($message) < 5000)) {
+            $messageErr = true;
+            $postSuccess = false;
+        }
+
+        // Validate the reCaptcha
+        $reCaptchaErr = false;
+        $receivedRecaptcha = $_POST['g-recaptcha-response'];
+        $verifiedRecaptcha = file_get_contents( 'https://www.google.com/recaptcha/api/siteverify?secret=' . RECAPTCHA_SECRETKEY . '&response=' . $receivedRecaptcha);
+        $verResponseData = json_decode($verifiedRecaptcha);
+
+        if( !$verResponseData->success ) {
+            $reCaptchaErr = true;
+            $postSuccess = false;
+        }
+
+        // If postSuccess is true at this stage then there has been no errors so far
+        // so let's try and send the email
+        $sendErr = false;
+        if ($postSuccess == true) {
+            $emailBody = 'Full Name: ' . $fullName . '<br /><br />Email Address: ' . $email . '<br /><br />Message:<br />' . $message; 
+            $headers[] = 'Content-Type: text/html; charset=UTF-8';
+            $headers[] = 'Reply-To: ' . $fullName . ' <' . $email . '>';
+
+            if (wp_mail(constant('CONTACT_EMAIL'), "Website Contact Form", $emailBody, $headers) == false) {
+                $sendErr = true;
+                $postSuccess = false;
+            }
+
+            // Also send to webmaster for testing
+            if (wp_mail("webmaster@northeastmetalspinners.co.uk", "Website Contact Form", $emailBody, $headers) == false) {
+                // Do nothing
+            }
+        }
+    }
+}
+
+function test_input($data)
+{
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}
 ?>
 <?php get_header(); ?>
 <div class="page-content bg-color1">
@@ -13,72 +82,6 @@ Template Name: Contact Page
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <?php if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                    if (isset($_POST['contactForm'])) {
-                        // Set postSuccess to true - this will get set to false during validation if a value fails
-                        $postSuccess = true;
-                        
-                        // Validate the email address
-                        $emailErr = false;
-                        $email = test_input($_POST["contactEmail"]);
-                        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) { 
-                            $emailErr = true;
-                            $postSuccess = false;
-                        }
-
-                        // Validate full name has a value and is no longer than 50 characters
-                        $fullNameErr = false;
-                        $fullName = test_input($_POST["contactFullName"]);
-                        if (!(strlen($fullName) > 0 && strlen($fullName) < 51)) {
-                            $fullNameErr = true;
-                            $postSuccess = false;
-                        }
-
-                        // Validate that the message has some content
-                        $messageErr = false;
-                        $message = test_input($_POST["contactMessage"]);
-                        if (!(strlen($message) > 0 && strlen($message) < 5000)) {
-                            $messageErr = true;
-                            $postSuccess = false;
-                        }
-
-                        // Validate the reCaptcha
-                        $reCaptchaErr = false;
-                        $receivedRecaptcha = $_POST['g-recaptcha-response'];
-                        $verifiedRecaptcha = file_get_contents( 'https://www.google.com/recaptcha/api/siteverify?secret=' . RECAPTCHA_SECRETKEY . '&response=' . $receivedRecaptcha);
-                        $verResponseData = json_decode($verifiedRecaptcha);
-
-                        if( !$verResponseData->success ) {
-	                        $reCaptchaErr = true;
-                            $postSuccess = false;
-                        }
-
-                        // If postSuccess is true at this stage then there has been no errors so far
-                        // so let's try and send the email
-                        $sendErr = false;
-                        if ($postSuccess == true) {
-                            $emailBody = 'Full Name: ' . $fullName . '<br /><br />Email Address: ' . $email . '<br /><br />Message:<br />' . $message; 
-                            $headers[] = 'Content-Type: text/html; charset=UTF-8';
-                            $headers[] = 'Reply-To: ' . $fullName . ' <' . $email . '>';
-
-                            if (wp_mail(constant('CONTACT_EMAIL'), "Website Contact Form", $emailBody, $headers) == false) {
-                                $sendErr = true;
-                                $postSuccess = false;
-                            }
-                        }
-                    }
-                }
-
-                function test_input($data)
-                {
-                    $data = trim($data);
-                    $data = stripslashes($data);
-                    $data = htmlspecialchars($data);
-                    return $data;
-                }
-
-                ?>
-
                 <?php if ((isset($postSuccess)) && ($postSuccess == true)) : ?>
                     <p>
                         Thank you for contacting North East Metal Spinners. We have received your enquiry and one of our team will be in contact with you as soon
@@ -115,6 +118,7 @@ Template Name: Contact Page
                     </form>
                 <?php endif; ?>
             </div>
+            
         </div>
     </div>
 </div>
