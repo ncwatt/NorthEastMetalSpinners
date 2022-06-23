@@ -8,6 +8,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Set postSuccess to true - this will get set to false during validation if a value fails
         $postSuccess = true;
         
+        // Validate the honeypot fields
+        $honeyErr = false;
+        if (strlen() > 0 || strlen() > 0) {
+            $honeyErr = true;
+        }
+
         // Validate the email address
         $emailErr = false;
         $email = test_input($_POST["contactEmail"]);
@@ -90,6 +96,10 @@ function test_input($data)
                 <?php else : ?>
                     <form id="contactForm" method="post" action="" novalidate>
                         <input type="hidden" name="contactForm" value="1" />
+                        <div class="">
+                            <input type="email" name="email" id="email" class="form-control">
+                            <input type="text" name="website" id="website" class="form-control">
+                        </div>
                         <div class="mb-3">
                             <label for="contactFullName" class="form-label">Full Name</label>
                             <input type="text" name="contactFullName" id="contactFullName" aria-describedby="contatcFullNameHelp" placeholder="Enter full name" value="<?php echo(isset($fullName)) ? $fullName : ''; ?>" class="form-control <?php if (isset($fullNameErr)) { echo($fullNameErr == true) ? 'is-invalid' : 'is-valid'; } ?>">
@@ -118,7 +128,12 @@ function test_input($data)
                     </form>
                 <?php endif; ?>
             </div>
-            
+            <div class="col-lg-6">
+                <img src="<?php echo get_template_directory_uri() ?>/img/contact.jpg" class="img-fluid" alt="Contact Us" />
+                <p>
+                    One of our dedicated customer services team will be in contact with you
+                </p>
+            </div>
         </div>
     </div>
 </div>
