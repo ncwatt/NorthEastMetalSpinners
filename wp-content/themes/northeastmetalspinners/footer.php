@@ -17,7 +17,11 @@
                 <div class="col-sm">
                     <div class="news">
                         <h3 class="heading">Our <span>Policies</span></h3>
-                        
+                        <p>We are currently finalising or privacy and returns policy pages. Links will appear here when completed.</p>
+                        <p>
+                            If you require this information in the meantime please use our
+                            <a href="<?php echo get_permalink( get_page_by_path( '/contact' ) ); ?>">contact page</a>.
+                        </p>
                     </div>
                 </div>
             </div>
