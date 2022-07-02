@@ -11,7 +11,7 @@
                         <h3 class="heading">North East <span>Metal Spinners</span></h3>
                         <p><i class="fa fa-map-marker highlight3"></i>&nbsp;42 Hutton Close, Crowther Industrial Estate, Washington, Tyne & Wear. NE38 0AH</p>
                         <p><i class="fa fa-phone highlight3"></i>&nbsp;<a href="tel:01914163440" class="highlight3 tel">(0191) 416 3440</a></p>
-                        <p><i class="fa fa-clock highlight3"></i>&nbsp;Mon-Fri: 08:00-16:00</p>
+                        <p><i class="fa fa-clock highlight3"></i>&nbsp;Mon-Thurs: 08:00-16:30<br />Fri: 08:00-12:00</p>
                     </div>
                 </div>
                 <div class="col-sm">
