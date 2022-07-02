@@ -215,7 +215,7 @@ function test_input($data)
                     </p>
                 </div>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-7 col-md-6">
                         <h4>Opening Times</h4>
                         <table>
                             <tr>
@@ -249,7 +249,7 @@ function test_input($data)
                             </tr>
                         </table>
                     </div>
-                    <div class="col-6">
+                    <div class="col-5 col-md-6">
                         <h4>Follow Us</h4>
                         <a href="https://www.facebook.com/North-East-Metal-Spinners-108728753962949" target="_blank">
                             <img src="<?php echo get_template_directory_uri() ?>/img/facebook_logo_512.png" class="img-fluid mb-2" style="width: 75px; height: auto;" alt="Follow us Facebook" />
