@@ -183,6 +183,7 @@ function test_input($data)
                                     <option <?php if (!isset($reason) || $reason == 'Choose a reason...') echo('selected') ?>>Choose a reason...</option>
                                     <option <?php if (isset($reason) && $reason == 'General Enquiry') echo('selected') ?>>General Enquiry</option>
                                     <option <?php if (isset($reason) && $reason == 'Quote Request') echo('selected') ?>>Quote Request</option>
+                                    <option <?php if (isset($reason) && $reason == 'Return Product') echo('selected') ?>>Return Product</option>
                                 </select>
                                 <small id="reasonHelp" class="form-text text-muted">Select the reason why you are contacting us</small>
                             </div>
