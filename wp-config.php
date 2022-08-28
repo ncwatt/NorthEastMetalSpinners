@@ -29,16 +29,13 @@ define( 'DB_USER', 'dbuser' );
 define( 'DB_PASSWORD', 'w0rdpr3ss' );
 
 /** Database hostname */
-define( 'DB_HOST', 'mariadb' );
+define( 'DB_HOST', 'nems-mariadb' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
 
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
-
-/** Do not use FTP for downloading plugins etc. */
-define('FS_METHOD','direct');
 
 /**#@+
  * Authentication unique keys and salts.
@@ -51,19 +48,15 @@ define('FS_METHOD','direct');
  *
  * @since 2.6.0
  */
-define( 'AUTH_KEY',         'd[F*2LK^2/Om5{]S8*:CUoyT_1O_ag_N*Y1 O?ZfU|*#lHQe5cXP]%}B8j+!li8j' );
-define( 'SECURE_AUTH_KEY',  'v-_TsW,%|LM`FE?xK`uPOx|.1Tq+]|YhRT##|UWB_N=y~SBT|b5v^5ZlI%5nVM%k' );
-define( 'LOGGED_IN_KEY',    'PxLxxR{k,m=T54ht/ )-?ec[{S$~!-+H[g&8u|ur!ujq%-V8,>n#H9e&_%TFr@ U' );
-define( 'NONCE_KEY',        'WXk0zr$:<Vp)IoSmHbe3cPzNoq59)0b8F%k}m$}4r4Nn{o{zXy*!xsx^AN41{VbP' );
-define( 'AUTH_SALT',        'z!|I!Yg5s]V-uHv+ELw].Xr`CkG.;4FD7*mkwLyNzoL*>c}gxo0-{Uus,-Q(p6bs' );
-define( 'SECURE_AUTH_SALT', 'yi%j7`:G8OL !}&EL;FY;8|tG .8&6xA6):9rNV!?OFCZ|&;7%CyF#~Y_{o07g,T' );
-define( 'LOGGED_IN_SALT',   '){YZEYOBzk%eUZFRO^AAH&W(_DlFp AeaHmo8R[tk>X`w&lWbDpnB2 )s=S%ilG0' );
-define( 'NONCE_SALT',       'Co@*)pt-p+w0)Cix3my[N4M%becsa;4lsk!6g6 v,UAw-7 =tZLr)Wg7{%6.v4*V' );
-define( 'RECAPTCHA_SITEKEY', '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI' );
-define( 'RECAPTCHA_SECRETKEY', '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe' );
-define( 'AUTOMATIC_UPDATER_DISABLED', true );
-define( 'DEV_ENV', 'true' );
-define( 'CONTACT_EMAIL', 'webmaster@northeastmetalspinners.co.uk');
+define( 'AUTH_KEY',         'KF?O ]=ffUqo3gYq-N{Pum7n3J.7,>BmI=)O:cp^@RD8z}vNFQr,6<`GB[e)0y7k' );
+define( 'SECURE_AUTH_KEY',  'xf}A.%:5G~j/&JbV3F]bbjJ+bs7T7d;cM~{gfdoZxZ Y5zUt|#OLT{NjpqpW{?i&' );
+define( 'LOGGED_IN_KEY',    'qHY{k+%ZJD)anZ!R&V?/rm[T-1Ww$Gtcy!G05)i_9K6)hYR{Gs17<NJ]$X#V8D%%' );
+define( 'NONCE_KEY',        'D#-}:D(A5A$sRK/x^T{!dTq&]Z0L+eE)| y@4|c// VV4|Ul`fM#`LFPuE(wJm|P' );
+define( 'AUTH_SALT',        '[Q`8dWX?hYGu$uyJoNboW-|Z=]z{l}4J S8>b:2#w?~lSK0%EJ4bUqCL3ow yOT<' );
+define( 'SECURE_AUTH_SALT', '4]Fo0OO7*9,dv#Ox=NC55_Vu|!?N3`&JCwZOjp/-(H1:Pfi3PerV72vPqB1I#xj|' );
+define( 'LOGGED_IN_SALT',   'JdPStIJn;`>S+wSUDtRS{0kRijd7}Bc/%xgh:7L2>)<3,lwOwn45vdocl7tIMMuU' );
+define( 'NONCE_SALT',       'Ti_N=&|0VRy/GLmgr4*~^kG3.Xv=4ZQ_SZvMn5y<(QvCk^CXAd6Vu|MgEZ}_c=|W' );
+
 /**#@-*/
 
 /**
