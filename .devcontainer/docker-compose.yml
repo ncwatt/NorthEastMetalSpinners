@@ -32,12 +32,12 @@ services:
       MYSQL_PASSWORD: 'w0rdpr3ss'
       MYSQL_DATABASE: 'wordpress'
     volumes:
-      - mysqldata-nems:/var/lib/mysql
+      - mysqldata:/var/lib/mysql
     ports:
       - 3306:3306
     networks:
       - dev-env
 volumes:
-  mysqldata-nems: {}
+  mysqldata: {}
 networks:
   dev-env: {}
