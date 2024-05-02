@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $emailBody = $emailBody . '<br /><br />Email Address: ' . $email;
             $emailBody = $emailBody . '<br /><br />Phone Number: ' . $phoneNumber;
             $emailBody = $emailBody . '<br /><br />Contact Reason: ' . $reason;
-            $emailBody = $emailBody . '<br /><br />Message:<br />' . $message; 
+            $emailBody = $emailBody . '<br /><br />Message:<br />' . nl2br($message); 
             $headers[] = 'Content-Type: text/html; charset=UTF-8';
             $headers[] = 'Reply-To: ' . $firstName . ' ' . $lastName . ' <' . $email . '>';
 
@@ -221,23 +221,23 @@ function test_input($data)
                             <tr>
                                 <td>Monday</td>
                                 <td rowspan="7">&nbsp;&nbsp;</td>
-                                <td>08:00 - 16:30</td>
+                                <td>07:00 - 17:00</td>
                             </tr>
                             <tr>
                                 <td>Tuesday</td>
-                                <td>08:00 - 16:30</td>
+                                <td>07:00 - 17:00</td>
                             </tr>
                             <tr>
                                 <td>Wednesday</td>
-                                <td>08:00 - 16:30</td>
+                                <td>07:00 - 17:00</td>
                             </tr>
                             <tr>
                                 <td>Thursday</td>
-                                <td>08:00 - 16:30</td>
+                                <td>07:00 - 16:00</td>
                             </tr>
                             <tr>
                                 <td>Friday</td>
-                                <td>08:00 - 12:00</td>
+                                <td>Closed</td>
                             </tr>
                             <tr>
                                 <td>Saturday</td>
@@ -251,7 +251,7 @@ function test_input($data)
                     </div>
                     <div class="col-5 col-md-6">
                         <h4>Follow Us</h4>
-                        <a href="https://www.facebook.com/North-East-Metal-Spinners-108728753962949" target="_blank">
+                        <a href="https://www.facebook.com/people/North-East-Metal-Spinners/61552019423573/" target="_blank">
                             <img src="<?php echo get_template_directory_uri() ?>/img/facebook_logo_512.png" class="img-fluid mb-2" style="width: 75px; height: auto;" alt="Follow us Facebook" />
                         </a>
                     </div>
