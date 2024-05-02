@@ -56,6 +56,7 @@ define( 'AUTH_SALT',        '[Q`8dWX?hYGu$uyJoNboW-|Z=]z{l}4J S8>b:2#w?~lSK0%EJ4
 define( 'SECURE_AUTH_SALT', '4]Fo0OO7*9,dv#Ox=NC55_Vu|!?N3`&JCwZOjp/-(H1:Pfi3PerV72vPqB1I#xj|' );
 define( 'LOGGED_IN_SALT',   'JdPStIJn;`>S+wSUDtRS{0kRijd7}Bc/%xgh:7L2>)<3,lwOwn45vdocl7tIMMuU' );
 define( 'NONCE_SALT',       'Ti_N=&|0VRy/GLmgr4*~^kG3.Xv=4ZQ_SZvMn5y<(QvCk^CXAd6Vu|MgEZ}_c=|W' );
+define( 'DEV_ENV', 'true' );
 
 /**#@-*/
 
