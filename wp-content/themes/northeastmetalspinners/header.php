@@ -41,8 +41,16 @@
 					            </div>
 				            </div>
 						    <div class="promo-details">
-							    <h6>We are open</h6>
-							    <span class="text">08:00 - 16:00</span>
+								<?php if ( date("w") >= 1 && date("w") < 4) : ?>
+									<h6>We are open</h6>
+							    	<span class="text">07:00-17:00</span>
+								<?php elseif ( date("w") == 4 ) : ?>
+									<h6>We are open</h6>
+							    	<span class="text">07:00-16:00</span>
+								<?php else : ?>
+									<h6>Today we are </h6>
+							    	<span class="text">Closed</span>
+								<?php endif; ?>
                             </div>
                         </div>
                         <div class="promo-box">
