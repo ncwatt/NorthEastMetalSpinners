@@ -84,7 +84,7 @@
         </div>
     </div>
     <!-- YouTube Videos -->
-    <div class="videos my-3 my-md-5">
+    <div class="videos my-3 my-md-5 d-none">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-4 mb-3 mb-md-0">
